@@ -11,6 +11,7 @@ export class NavigationComponent implements OnInit {
   createDate!: Date;
   like!: number;
   imageUrl!: string;
+  buttonTest!: string;
 
   //ngOnInit est appelé automatiquement par Angular au moment de la création de chaque instance du component
   ngOnInit() {
@@ -19,9 +20,16 @@ export class NavigationComponent implements OnInit {
     this.createDate = new Date();
     this.like = 6;
     this.imageUrl = 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80';
+    this.buttonTest = 'Like';
   }
 
-  onAddLike() {
-    this.like++;
+  onLike() {
+    if (this.buttonTest === 'Like') {
+      this.like++;
+      this.buttonTest = 'Unlike';
+    } else {
+      this.like--;
+      this.buttonTest = 'Like';
+    }
   }
 }
