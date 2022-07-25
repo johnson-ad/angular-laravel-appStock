@@ -21,4 +21,7 @@ export class NavigationComponent implements OnInit {
     this.imageUrl = 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80';
   }
 
+  onAddLike() {
+    this.like++;
+  }
 }

@@ -11,5 +11,9 @@
     <img [src]="imageUrl" [alt]="title">
     <!-- <img src="{{imageUrl}}" alt="{{title}}"> -->
     <P>{{description}}</P>
-    <p>🤌 {{like}}</p>
+    <p>
+        <!-- le nom des evenements se met entre parenthes-->
+        <button (click)="onAddLike()">Like</button>
+        🤌 {{like}}
+    </p>
 </div>
