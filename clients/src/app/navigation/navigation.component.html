@@ -1,10 +1,15 @@
-<nav class="container_navbar">
-    <div class="navbar_logo">
-        <span>Logo</span>
-    </div>
-    <ul class="navbar_items">
-        <li class="navbar_link"><a routerLink="/">Home</a></li>
-        <li class="navbar_link"><a routerLink="/about">About</a></li>
-        <li class="navbar_link"><a routerLink="/contact">Contact</a></li>
-    </ul>
-</nav>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="face-snap-card">
+    <h1>{{title}}</h1>
+    <p>Mise en ligne le {{ createDate}}</p>
+    <!--[src] permet de lie inageUrl meme si elle n'est pas un string 
+    comme on a declarer dans le navigation.component.ts
+    -->
+    <img [src]="imageUrl" [alt]="title">
+    <!-- <img src="{{imageUrl}}" alt="{{title}}"> -->
+    <P>{{description}}</P>
+    <p>🤌 {{like}}</p>
+</div>
