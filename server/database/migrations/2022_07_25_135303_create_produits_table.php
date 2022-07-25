@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('produits', function (Blueprint $table) {
             $table->id();
             $table->string('libelle');
-            $table->number('quantite');
+            $table->integer('quantite');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

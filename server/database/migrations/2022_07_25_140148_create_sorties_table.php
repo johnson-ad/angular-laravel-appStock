@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('sorties', function (Blueprint $table) {
             $table->id();
-            $table->number('quantite');
-            $table->number('prix');
+            $table->integer('quantite');
+            $table->integer('prix');
             $table->date('date');
             $table->timestamps();
         });
