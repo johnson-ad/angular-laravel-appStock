@@ -15,6 +15,6 @@
     <p>
         <!-- le nom des evenements se met entre parenthes-->
         <button (click)="onLike()">{{buttonTest}}</button>
-        🤌 {{likes.like}}
+        <span [ngStyle]="{color: 'rgb(0,'+ likes.like*30 +',0)'}">🤌 {{likes.like}}</span>
     </p>
 </div>

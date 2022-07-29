@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
         title: 'Johnson & Johnson',
         description: 'Johnson & Johnson is a global leadere beauty brand in the U.S.',
         createDate: new Date(),
-        like: 12,
+        like: 40,
         imageUrl: 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80',
         location: 'New York'
       },
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
         title: 'The Body Shop',
         description: 'Johnson beauty brand in the U.S.he U.S.',
         createDate: new Date(),
-        like: 4,
+        like: 350,
         imageUrl: 'https://images.unsplash.com/photo-1654538985746-b4ee3c142193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
         location: 'Paris'
       },
