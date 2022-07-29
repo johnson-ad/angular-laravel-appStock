@@ -1,1 +1,3 @@
-<app-navigation [likes]="myLike"></app-navigation>
+<app-navigation [likes]="myLike" *ngIf="myLike.like > 4"></app-navigation>
+<app-navigation [likes]="myLike2" *ngIf="myLike.like < 2"></app-navigation>
+<app-navigation [likes]="myLike3"></app-navigation>

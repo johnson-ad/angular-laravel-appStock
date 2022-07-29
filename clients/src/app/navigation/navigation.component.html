@@ -10,6 +10,7 @@
     -->
     <img [src]="likes.imageUrl" [alt]="likes.title">
     <!-- <img src="{{imageUrl}}" alt="{{title}}"> -->
+    <p *ngIf="likes.location === 'New York' ">Photo prise a {{likes.location}}</p>
     <P>{{likes.description}}</P>
     <p>
         <!-- le nom des evenements se met entre parenthes-->

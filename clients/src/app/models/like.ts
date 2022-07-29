@@ -16,10 +16,21 @@ export class Like {
     // }
 
     //Deuxieme methode
-    constructor(
-        public title: string,
-        public description: string,
-        public createDate: Date,
-        public like: number,
-        public imageUrl: string) { }
+    // constructor(
+    //     public title: string,
+    //     public description: string,
+    //     public createDate: Date,
+    //     public like: number,
+    //     public imageUrl: string,
+    //     public location?: string) {
+
+    // }
+
+    //Troisieme methode
+    title!: string;
+    description!: string;
+    createDate!: Date;
+    like!: number;
+    imageUrl!: string;
+    location?: string;
 }

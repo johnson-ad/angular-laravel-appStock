@@ -17,7 +17,6 @@ export class NavigationComponent implements OnInit {
   */
   @Input() likes!: Like;
 
-
   buttonTest!: string;
 
   //ngOnInit est appelé automatiquement par Angular au moment de la création de chaque instance du component
