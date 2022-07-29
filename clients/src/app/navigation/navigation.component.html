@@ -2,7 +2,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-<div class="face-snap-card">
+<!-- 
+    [ngClass]="{ 'class-name': condition }"
+-->
+<div class="face-snap-card" [ngClass]="{snapped: buttonTest === 'Unlike'}">
     <h1>{{likes.title}}</h1>
     <p>Mise en ligne le {{ likes.createDate}}</p>
     <!--[src] permet de lie inageUrl meme si elle n'est pas un string 

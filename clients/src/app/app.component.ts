@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
         title: 'The Body Shop',
         description: 'Johnson beauty brand in the U.S.he U.S.',
         createDate: new Date(),
-        like: 350,
+        like: 23,
         imageUrl: 'https://images.unsplash.com/photo-1654538985746-b4ee3c142193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
         location: 'Paris'
       },
