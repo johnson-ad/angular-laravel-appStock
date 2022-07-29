@@ -3,17 +3,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 <div class="face-snap-card">
-    <h1>{{title}}</h1>
-    <p>Mise en ligne le {{ createDate}}</p>
+    <h1>{{likes.title}}</h1>
+    <p>Mise en ligne le {{ likes.createDate}}</p>
     <!--[src] permet de lie inageUrl meme si elle n'est pas un string 
     comme on a declarer dans le navigation.component.ts
     -->
-    <img [src]="imageUrl" [alt]="title">
+    <img [src]="likes.imageUrl" [alt]="likes.title">
     <!-- <img src="{{imageUrl}}" alt="{{title}}"> -->
-    <P>{{description}}</P>
+    <P>{{likes.description}}</P>
     <p>
         <!-- le nom des evenements se met entre parenthes-->
         <button (click)="onLike()">{{buttonTest}}</button>
-        🤌 {{like}}
+        🤌 {{likes.like}}
     </p>
 </div>
