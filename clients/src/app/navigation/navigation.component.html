@@ -6,7 +6,7 @@
     [ngClass]="{ 'class-name': condition }"
 -->
 <div class="face-snap-card" [ngClass]="{snapped: buttonTest === 'Unlike'}">
-    <h1>{{likes.title}}</h1>
+    <h1>{{likes.title | titlecase}}</h1>
     <p>Mise en ligne le {{ likes.createDate}}</p>
     <!--[src] permet de lie inageUrl meme si elle n'est pas un string 
     comme on a declarer dans le navigation.component.ts
