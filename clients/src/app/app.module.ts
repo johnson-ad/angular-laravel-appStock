@@ -1,7 +1,7 @@
 import { NgModule, LOCALE_ID } from '@angular/core';// LOCALE_ID is a token that is used to inject the locale into the application
 import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common'; // for datepicker
-import * as fr from '@angular/common/locales/fr'; // <-- import locale fr
+import * as fr from '@angular/common/locales/fr'; // <-- import locale fr | si on veut changer encore la langue il suffit de changer fr par un auter ex: ca (canadien)
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

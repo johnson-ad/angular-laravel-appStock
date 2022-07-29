@@ -5,13 +5,16 @@
 <!-- 
     [ngClass]="{ 'class-name': condition }"
     les pipe : permet de faire du formatage de text dates etc...
-      -> lowercase | uppercase | titlecase | json | date
-      NB: pour ajout une configuration a une pipe on ajout : ' '
+      -> lowercase | uppercase | titlecase | json | date | DecimaPipe | PercentPipe | CurencyPipe 
+            NB: pour ajout une configuration a une pipe on ajout : ' '
       exemple : ' likes.createDate | date: "dd/MM/yyyy"'
 -->
 <div class="face-snap-card" [ngClass]="{snapped: buttonTest === 'Unlike'}">
+    <p>{{3455677.45 | number}}</p>
+    <p>{{ 0.46 | percent}}</p>
+    <p>{{ 344.46 | currency: 'EUR'}}</p>
     <h1>{{likes.title | titlecase}}</h1>
-    <p>Mise en ligne le {{ likes.createDate | date}}</p>
+    <p>Mise en ligne le {{ likes.createDate | date: 'le d MMMM yyyy'}}</p>
     <!--[src] permet de lie inageUrl meme si elle n'est pas un string 
     comme on a declarer dans le navigation.component.ts
     -->
