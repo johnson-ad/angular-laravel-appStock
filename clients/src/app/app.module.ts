@@ -6,11 +6,17 @@ import * as fr from '@angular/common/locales/fr'; // <-- import locale fr | si o
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
+import { HeaderComponent } from './header/header.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    FaceSnapListComponent,
+    HeaderComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
