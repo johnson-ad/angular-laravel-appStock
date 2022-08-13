@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,23 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 //get all products
-Route::get('products', [ProductController::class, 'getProduct']);
+Route::get('products', [ProduitController::class, 'getProduct']);
 //get product by id
-Route::get('product/{id}', [ProductController::class, 'getProductByuId']);
+Route::get('product/{id}', [ProduitController::class, 'getProductByuId']);
 //add product
-Route::post('addProduct', [ProductController::class, 'addProduct']);
+Route::post('addProduct', [ProduitController::class, 'addProduct']);
 //upddate product by id
-Route::put('updateProduct/{id}', [ProductController::class, 'updateProduct']);
+Route::put('updateProduct/{id}', [ProduitController::class, 'updateProduct']);
 //delete product by id
-Route::delete('deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
+Route::delete('deleteProduct/{id}', [ProduitController::class, 'deleteProduct']);
+
+
+
+//get all products
+Route::get('post', [PostController::class, 'getPost']);
+//add product
+Route::post('addPost', [PostController::class, 'addPost']);
+//upddate product by id
+Route::put('updatePost/{id}', [PostController::class, 'updatePost']);
+//delete product by id
+Route::delete('deletePost/{id}', [PostController::class, 'deletePost']);
