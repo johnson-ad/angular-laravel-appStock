@@ -9,20 +9,20 @@ use App\Models\Post;
 class PostController extends Controller
 {
     //getProduct
-    public function getProduct()
+    public function getPost()
     {
         return response()->json(Post::all(), 200);
     }
 
     // add Post
-    public function addProduct(Request $request)
+    public function addPost(Request $request)
     {
         $post = Post::create($request->all());
         return response($post, 201);
     }
 
     // update Post
-    public function updateProduct(Request $request, $id)
+    public function updatePost(Request $request, $id)
     {
         $post = Post::find($id);
         if (is_null($post)) {
@@ -33,7 +33,7 @@ class PostController extends Controller
     }
 
     // delete Post
-    public function deleteProduct(Request $request, $id)
+    public function deletePost(Request $request, $id)
     {
         $post = Post::find($id);
         if (is_null($post)) {

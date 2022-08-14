@@ -9,6 +9,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ProduitComponent } from './produit/produit.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     NavigationComponent,
     FaceSnapListComponent,
     HeaderComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ProduitComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' } // <-- register fr locale

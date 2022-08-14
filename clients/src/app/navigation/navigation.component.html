@@ -13,18 +13,27 @@
     <!-- <p>{{3455677.45 | number}}</p>
     <p>{{ 0.46 | percent}}</p>
     <p>{{ 344.46 | currency: 'EUR'}}</p>
-    <p>Mise en ligne le {{ likes.createDate | date: 'le d MMMM yyyy'}}</p> -->
-    <!--[src] permet de lie inageUrl meme si elle n'est pas un string 
-        comme on a declarer dans le navigation.component.ts
-    -->
-    <h1>{{likes.title | titlecase}}</h1>
-    <img [src]="likes.imageUrl" [alt]="likes.title">
-    <!-- <img src="{{imageUrl}}" alt="{{title}}"> -->
-    <p *ngIf="likes.location === 'New York' ">Photo prise a {{likes.location}}</p>
-    <P>{{likes.description}}</P>
-    <p>
-        <!-- le nom des evenements se met entre parenthes-->
-        <button (click)="onLike()">{{buttonTest}}</button>
-        <span [ngStyle]="{color: 'rgb(0,'+ likes.like*30 +',0)'}">🤌 {{likes.like}}</span>
-    </p>
+    [src] permet de lie inageUrl meme si elle n'est pas un string 
+    comme on a declarer dans le navigation.component.ts
+-->
+
+
+    <div *ngFor="let posts of post ">
+        <h1>{{posts.title | titlecase}}</h1>
+        <img [src]="likes.imageUrl" [alt]="likes.title">
+        <p>Mise en ligne le {{ likes.createDate | date: 'le d MMMM yyyy'}}</p>
+        <p *ngIf="likes.location === 'New York' ">Photo prise a {{likes.location}}</p>
+        <P>{{posts.content}}</P>
+
+        <p>
+            <!-- {{likes.post}} -->
+            <!-- le nom des evenements se met entre parenthes-->
+            <button (click)="onLike()">{{buttonTest}}<span [ngStyle]="{color: 'rgb(0,'+ likes.like*30 +',0)'}">👍
+                    {{likes.like}}</span></button>
+            <button (click)="onLike()">{{!buttonTest}}<span [ngStyle]="{color: 'rgb(0,'+ likes.like*30 +',0)'}">👎
+                    {{likes.like}}</span></button>
+        </p>
+    </div>
+
+
 </div>

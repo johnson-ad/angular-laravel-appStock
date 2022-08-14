@@ -33,4 +33,5 @@ export class Like {
     like!: number;
     imageUrl!: string;
     location?: string;
+    post?: string;
 }
